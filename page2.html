@@ -1,0 +1,204 @@
+<!-- Author:      Ethan Ai 
+     Course:      COMP 3612
+     Date:        10/7/2023
+    
+        ASG 1
+        
+     HTML main for page 2. Style sheet is pages2styles.css.
+     
+     Everything in the forum posts some sort of data to the linked php. 
+        -exception are action buttons (edit, collection, delete)
+        -action buttons are purely cosmetic and highlight when clicked using :focus
+        -did not add the archive button as it was not shown in screen capture in the specs
+    -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="page2styles.css">
+</head>
+<form action="http://www.randyconnolly.com/tests/process.php" method = "POST">
+    <h1>
+        Advanced Art Work Search
+    </h1>
+<main>
+    <div class = "topbar">
+        <label for="Search"></label>
+        <input type="text" id="Search" name ="search">
+        Subject: 
+
+        <input type="radio" id="History" name="subject" value="History">
+        <label for="History">History</label>
+        <input type="radio" id="Person" name="subject" value="Person">
+        <label for="Person">Person</label>
+        <input type="radio" id="Landscape" name="subject" value="Landscape">
+        <label for="Landscape">Landscape</label>
+
+        <label for="filter"> </label> 
+        <select name="filter" id="filter"> 
+        <option hidden disabled selected value></option>
+        <option value="0">Baroque</option> 
+        <option value="1">Neo-Classicism</option> 
+        <option value="2">Renaissance</option> 
+        <option value="3">Realism</option> 
+        </select>  
+    
+    </div>
+    <div class = "midbar">
+        <h2>
+            Paintings
+        </h2>
+        <table>
+            <tr class = "toc">
+                <td> </td>  <!-- filler for checkbox column -->
+                <td> </td>  <!-- filler for image column-->
+                <td>Title</td>
+                <td>Artist</td>
+                <td>Year</td>
+                <td>Genre</td>
+                <td>Actions</td>
+            </tr>
+            <tr>
+                <td>
+                        <input type="checkbox" name = "index[]" value="0" />
+                    </td>
+                <td class = "img">
+                        <img src="images/125010.jpg" width="100" height="100">
+                </td>
+                <td  class = "data">
+                        <em>Portrait of Alida Christina Assink</em>
+                </td>
+                <td class = "data">
+                        Kruseman, Jan
+                </td>
+                <td class = "data">
+                        1833
+                </td>
+                <td class = "data">
+                        Realism
+                </td>
+                <td class = "actions">
+                        <button class="button edit" type="button">
+                            <img src="images/edit.png" width="20" height="20">
+                        </button>
+                        <button type="button">
+                            <img src="images/collection.png" width="20" height="20">
+                        </button>
+                        <button type="button">
+                            <img src="images/delete.png" width="20" height="20">
+                        </button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                        <input type="checkbox" name = "index[]" value="1" />
+                    </td>
+                <td class = "img">
+                        <img src="images/125020.jpg" width="100" height="100">
+                </td>
+                <td  class = "data">
+                        <em>Portrait of William II, King of the Netherlands</em>
+                </td>
+                <td class = "data">
+                        Kruseman, Jan
+                </td>
+                <td class = "data">
+                        1839
+                </td>
+                <td class = "data">
+                        Realism
+                </td>
+                <td class = "actions">
+                        <button class="button edit" type="button">
+                            <img src="images/edit.png" width="20" height="20">
+                        </button>
+                        <button type="button">
+                            <img src="images/collection.png" width="20" height="20">
+                        </button>
+                        <button type="button">
+                            <img src="images/delete.png" width="20" height="20">
+                        </button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                        <input type="checkbox" name = "index[]" value="2" />
+                    </td>
+                <td class = "img">
+                        <img src="images/130020.jpg" width="100" height="100">
+                </td>
+                <td  class = "data">
+                        <em>Three Girls from the Amsterdam Orphanage</em>
+                </td>
+                <td class = "data">
+                        Schwartze, Therese
+                </td>
+                <td class = "data">
+                        1885
+                </td>
+                <td class = "data">
+                        Realism
+                </td>
+                <td class = "actions">
+                        <button class="button edit" type="button">
+                            <img src="images/edit.png" width="20" height="20">
+                        </button>
+                        <button type="button">
+                            <img src="images/collection.png" width="20" height="20">
+                        </button>
+                        <button type="button">
+                            <img src="images/delete.png" width="20" height="20">
+                        </button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                        <input type="checkbox" name = "index[]" value="3" />
+                    </td>
+                <td class = "img">
+                        <img src="images/127010.jpg" width="100" height="100">
+                </td>
+                <td  class = "data">
+                        <em>Windmill at Wijk bij Duurstede</em>
+                </td>
+                <td class = "data">
+                        Ruisdael, Jacob van
+                </td>
+                <td class = "data">
+                        1670
+                </td>
+                <td class = "data">
+                        Dutch Golden Age
+                </td>
+                <td class = "actions">
+                        <button class="button edit" type="button">
+                            <img src="images/edit.png" width="20" height="20">
+                        </button>
+                        <button type="button">
+                            <img src="images/collection.png" width="20" height="20">
+                        </button>
+                        <button type="button">
+                            <img src="images/delete.png" width="20" height="20">
+                        </button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class ="botbar">
+        <select name="actions" id="actions" > 
+            <option hidden disabled selected value></option>
+            <option value="1">Archive</option> 
+            <option value="2">Edit</option> 
+            <option value="3">Delete</option> 
+            <option value="4">Collection</option> 
+            </select>  
+        
+        <button class="subm">Apply To All</button>
+    </div>
+</main>
+</form>
+
+
+</html>
