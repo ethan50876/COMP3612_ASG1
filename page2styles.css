@@ -1,7 +1,7 @@
 /* Author:      Ethan Ai 
    Course:      COMP 3612
    Date:        10/7/2023 
-   
+
         ASG 1
 
     style sheet for page 2 (page2.html)
@@ -72,10 +72,11 @@ table{
   
 }
 
+td.sub{
+    padding: 3px;    
+}
 tr.toc{
     background-color: var(--color-primary-1-050);
-
-    
 }
 
 button:focus{
@@ -113,4 +114,7 @@ input{
 select{
     margin: 3px;
     padding: 5px;
+}
+tr.bordered{
+    border-bottom: 1px solid rgb(114, 114, 9);
 }
