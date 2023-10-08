@@ -74,6 +74,7 @@ table{
 
 td.sub{
     padding: 3px;    
+    padding-left: 18px;
 }
 tr.toc{
     background-color: var(--color-primary-1-050);
